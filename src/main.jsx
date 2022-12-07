@@ -4,7 +4,7 @@ import BitcoinIndex from './BitcoinIndex'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <BitcoinIndex />
-  </React.StrictMode>
+  </>
 )
