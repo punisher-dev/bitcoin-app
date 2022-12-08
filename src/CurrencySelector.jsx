@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const CurrencySelector = ({ currency, setCurrency }) => {
     let [currencies, setCurrencies] = useState([])
     useEffect(() => {
-        fetch(`https://api.coindesk.com/v1/bpi/supported-currencies.json`)
+        fetch(`https://justcors.com/tl_94c41d8/https://api.coindesk.com/v1/bpi/supported-currencies.json`)
         .then(res => res.json())
         .then(data => setCurrencies(data))
         // .then(data => console.log(data))) when fetching always check the data first
