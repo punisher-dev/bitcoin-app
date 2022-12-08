@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import BitcoinIndex from './BitcoinIndex'
+import BitcoinApp from './BitcoinApp'
+import Card from './Card'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <BitcoinIndex />
-  </>
+<>
+<Card>
+<BitcoinApp />
+</Card>
+</>
 )

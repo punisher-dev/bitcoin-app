@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const BitcoinIndex = () => {
+const BitcoinIndex = ({currency="AUD"}) => {
     let [price, setPrice] = useState(0)
 
     // Mount and Update
@@ -10,10 +10,10 @@ const BitcoinIndex = () => {
 
     // Mount only
     useEffect(() => {
-        fetch('http://api.coindesk.com/v1/bpi/currentprice/AUD.json')
+        fetch(`http://api.coindesk.com/v1/bpi/currentprice/${currency}.json`)
         .then(res => res.json())
-        .then(data => setPrice(data.bpi.AUD.rate_float))
-    }, [])
+        .then(data => setPrice(data.bpi[currency].rate_float))
+    }, [currency])
 
     // Mount and price update only
     useEffect(() => {
@@ -25,9 +25,10 @@ const BitcoinIndex = () => {
   return (
     <>
         <h1>Bitcoin Index</h1>
-        {price > 0 ? <h3>Current Price: AUD{price}</h3> : <h3>loading...</h3>}
+        {price > 0 ? <h3>Current Price: {currency} {price}</h3> : <h3>loading...</h3>}
     </>
   )
 }
 
 export default BitcoinIndex
+
