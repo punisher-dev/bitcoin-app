@@ -3,8 +3,9 @@ import { useEffect, useState } from "react"
 const CurrencySelector = ({ currency, setCurrency }) => {
     let [currencies, setCurrencies] = useState([])
 
+    
     useEffect(() => {
-        fetch("https://justcors.com/tl_c0638ee/http://api.coindesk.com/v1/bpi/supported-currencies.json")
+        fetch("https://justcors.com/tl_61d69dc/http://api.coindesk.com/v1/bpi/supported-currencies.json")
             .then((res) => res.json())
             .then((data) => setCurrencies(data))
     }, [])
