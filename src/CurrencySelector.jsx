@@ -5,7 +5,7 @@ const CurrencySelector = ({ currency, setCurrency }) => {
 
     
     useEffect(() => {
-        fetch("https://justcors.com/tl_9e2da13/http://api.coindesk.com/v1/bpi/supported-currencies.json")
+        fetch("https://justcors.com/tl_05acb7a/http://api.coindesk.com/v1/bpi/supported-currencies.json")
             .then((res) => res.json())
             .then((data) => setCurrencies(data))
     }, [])
