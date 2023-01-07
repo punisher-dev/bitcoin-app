@@ -11,7 +11,7 @@ const BitcoinIndex = ({ currency="AUD" }) => {
     
     // Mount and currency change
     useEffect(() => {
-        fetch(`https://justcors.com/tl_676e6b9/http://api.coindesk.com/v1/bpi/currentprice/${currency}.json`)
+        fetch(`https://justcors.com/tl_663e1b6/http://api.coindesk.com/v1/bpi/currentprice/${currency}.json`)
             .then((res) => res.json())
             .then((data) => setPrice(data.bpi[currency].rate_float))
     }, [currency])
